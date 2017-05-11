@@ -324,7 +324,7 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 						return totalSelected + ' ' + $scope.texts.dynamicButtonTextSuffix;
 					}
 				} else {
-					return $scope.texts.buttonDefaultText;
+					return $scope.translationTexts.buttonDefaultText;
 				}
 			};
 
