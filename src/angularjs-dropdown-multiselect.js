@@ -44,8 +44,8 @@ directiveModule.directive('ngDropdownMultiselect', ['$filter', '$document', '$co
 			template += '<li ng-if="(settings.showCheckAll && settings.selectionLimit > 0) || settings.showUncheckAll || settings.showEnableSearchButton" class="divider"></li>';
 			template += '<li ng-if="extraSettings.enableSearch"><div class="dropdown-header"><input type="text" class="form-control searchField" ng-keydown="keyDownSearchDefault($event); keyDownSearch($event, input.searchFilter);" ng-style="{width: \'100%\'}" ng-model="input.searchFilter" placeholder="{{texts.searchPlaceholder}}" /></li>';
 			template += '<li class="check-all-btn" ng-if="settings.showCheckAll && settings.showUncheckAll">';
-			template += '<button class="pull-left" ng-if="settings.showCheckAll && settings.selectionLimit !== 1" ng-class="settings.buttonClasses" ng-keydown="keyDownLink($event)" data-ng-click="selectAll()" tabindex="-1" id="selectAll">{{texts.checkAll}}</button>';
-			template += '<button class="pull-right" ng-if="settings.showUncheckAll" ng-class="settings.buttonClasses" ng-keydown="keyDownLink($event)" data-ng-click="deselectAll();" tabindex="-1" id="deselectAll">{{texts.uncheckAll}}</button>';
+			template += '<button ng-if="settings.showCheckAll && settings.selectionLimit !== 1" ng-class="settings.buttonClasses" ng-keydown="keyDownLink($event)" data-ng-click="selectAll()" tabindex="-1" id="selectAll">{{texts.checkAll}}</button>';
+			template += '<button ng-if="settings.showUncheckAll" ng-class="settings.buttonClasses" ng-keydown="keyDownLink($event)" data-ng-click="deselectAll();" tabindex="-1" id="deselectAll">{{texts.uncheckAll}}</button>';
 			template += '</li>';
 			template += '<li ng-if="extraSettings.enableSearch" class="divider"></li>';
 			template += '</ul>'
